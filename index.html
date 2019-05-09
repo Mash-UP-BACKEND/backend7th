@@ -17,7 +17,10 @@
                 <button type="submit">누구인가요?</button>
             </div>
         </form>
+        
         <h1 id="header"></h1>
+        <h2 id="team"></h2>
+        <div id="matching"></div>
         <h2 id="introduce"></h2>
         <div id="intro"></div>
         <h2 id="experience"></h2>
@@ -60,6 +63,12 @@
                                 interest.innerText = "흥미";
                                 var contents = document.getElementById("inter");
                                 contents.innerText = json["interest"];
+                            }
+                            if (json["team"]) {
+                                var team = document.getElementById("team");
+                                team.innerText = "팀"
+                                var contents = document.getElementById("matching");
+                                contents.innerText = json["team"];
                             }
                         } else {
                             header.innerText = "이름을 입력해주세요";
